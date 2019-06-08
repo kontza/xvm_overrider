@@ -1,0 +1,113 @@
+{
+    "autoReloadConfig": true,
+    "minimapAlt": {
+        "enabled": false
+    },
+    "minimap": {
+        "enabled": false
+    },
+    "hangar": {
+        "showReferralButton": false,
+        "showGeneralChatButton": false,
+        "showPromoPremVehicle": false,
+        "crewReturnByDefault": true,
+        "blockVehicleIfLowAmmo": true,
+        "enableEquipAutoReturn": true,
+        "combatIntelligence": {
+            "showPopUpMessages": false
+        },
+        "carousel": {
+            "small": {
+                "extraFields": [{
+                    "__xvm_overrider__": {
+                        "key": "format",
+                        "value": "<b><font face='$FieldFont' size='12' color='{{v.c_winrate|#C8C8B5}}'>{{v.winrate%2d~%}}</font></b>"
+                    },
+                    "enabled": false
+                }]
+            }
+        }
+    },
+    "battle": {
+        "sixthSenseDuration": 5000,
+        "camera": {
+            "enabled": true,
+            "arcade": {
+                "distRange": [2, 100]
+            },
+            "postmortem": {
+                "distRange": [2, 100]
+            },
+            "sniper": {
+                "zooms": [2, 4, 8, 16, 25]
+            }
+        }
+    },
+    "battleLabels": {
+        "formats": [{
+                "enabled": false,
+                "__xvm_overrider__": {
+                    "key": "updateEvent",
+                    "value": "PY(ON_HIT_LOG), ON_PANEL_MODE_CHANGED"
+                }
+            },
+            {
+                "enabled": false,
+                "__xvm_overrider__": {
+                    "key": "updateEvent",
+                    "value": "PY(ON_TOTAL_EFFICIENCY), ON_PANEL_MODE_CHANGED"
+                }
+            },
+            {
+                "enabled": false,
+                "__xvm_overrider__": {
+                    "key": "updateEvent",
+                    "value": "PY(ON_UPDATE_HP)"
+                }
+            },
+            {
+                "enabled": false,
+                "__xvm_overrider__": {
+                    "key": "updateEvent",
+                    "value": "PY(ON_TOTAL_EFFICIENCY)"
+                }
+            },
+            {
+                "enabled": false,
+                "__xvm_overrider__": {
+                    "key": "updateEvent",
+                    "value": "PY(ON_HIT)"
+                }
+            },
+            {
+                "enabled": false,
+                "__xvm_overrider__": {
+                    "key": "updateEvent",
+                    "value": "PY(ON_LAST_HIT)"
+                }
+            }
+        ]
+    },
+    "sounds": {
+        "enabled": false
+    },
+    "playersPanel": {
+        "medium": {
+            "standardFields": [
+                "frags",
+                "nick"
+            ]
+        }
+    },
+    "markers": {
+        "enabled": false
+    },
+    "hotkeys": {
+        "minimapZoom": {
+            "enabled": false
+        }
+    },
+    "damageLog": {
+        "enabled": false
+    }
+}
