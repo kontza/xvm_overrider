@@ -1,5 +1,6 @@
 {
-    "autoReloadConfig": true,
+    "dumpConfig": false,
+    "autoReloadConfig": false,
     "minimapAlt": {
         "enabled": false
     },
@@ -18,13 +19,47 @@
         },
         "carousel": {
             "small": {
-                "extraFields": [{
-                    "__xvm_overrider__": {
-                        "key": "format",
-                        "value": "<b><font face='$FieldFont' size='12' color='{{v.c_winrate|#C8C8B5}}'>{{v.winrate%2d~%}}</font></b>"
+                "extraFields": [
+                    {
+                        "__xvm_overrider__": {
+                            "key": "format",
+                            "value": "<b><font face='$FieldFont' size='12' color='{{v.c_winrate|#C8C8B5}}'>{{v.winrate%2d~%}}</font></b>"
+                        },
+                        "enabled": false
+                    }
+                ]
+            },
+            "normal": {
+                "extraFields": [
+                    {
+                        "__xvm_overrider__": {
+                            "key": "format",
+                            "value": "<b><font face='$FieldFont' size='12' color='{{v.c_winrate|#CFCFCF}}'>{{v.winrate%2d~%}}</font></b>"
+                        },
+                        "enabled": false
                     },
-                    "enabled": false
-                }]
+                    {
+                        "__xvm_overrider__": {
+                            "key": "format",
+                            "value": "<b><font face='$FieldFont' size='12' color='{{v.c_xtdb|#CFCFCF}}'>{{v.tdb%d}}</font></b>"
+                        },
+                        "enabled": false
+                    },
+                    {
+                        "__xvm_overrider__": {
+                            "key": "alpha",
+                            "value": "{{v.tdb?|0}}"
+                        },
+                        "enabled": false
+                    },
+                    {
+                        "__xvm_overrider__": {
+                            "key": "alpha",
+                            "value": "{{v.winrate?|0}}"
+                        },
+                        "enabled": false
+                    }
+                ]
             }
         }
     },
@@ -33,18 +68,31 @@
         "camera": {
             "enabled": true,
             "arcade": {
-                "distRange": [2, 100]
+                "distRange": [
+                    2,
+                    100
+                ]
             },
             "postmortem": {
-                "distRange": [2, 100]
+                "distRange": [
+                    2,
+                    100
+                ]
             },
             "sniper": {
-                "zooms": [2, 4, 8, 16, 25]
+                "zooms": [
+                    2,
+                    4,
+                    8,
+                    16,
+                    25
+                ]
             }
         }
     },
     "battleLabels": {
-        "formats": [{
+        "formats": [
+            {
                 "enabled": false,
                 "__xvm_overrider__": {
                     "key": "updateEvent",

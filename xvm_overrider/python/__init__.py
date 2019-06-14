@@ -23,8 +23,11 @@ from overrider import Overrider
 
 o = Overrider()
 
+def override_values(e=None):
+    o.override_values()
+
 def start():
-    g_eventBus.addListener(XVM_EVENT.RELOAD_CONFIG, o.override_values)
+    g_eventBus.addListener(XVM_EVENT.RELOAD_CONFIG, override_values)
     g_eventBus.addListener(XVM_EVENT.CONFIG_LOADED, o.override_values)
     # g_eventBus.addListener(XFW_COMMAND.XFW_CMD, on_xfw_command)
     o.override_values()
@@ -33,7 +36,7 @@ BigWorld.callback(0, start)
 
 @registerEvent(game, 'fini')
 def fini():
-    g_eventBus.removeListener(XVM_EVENT.RELOAD_CONFIG, o.override_values)
+    g_eventBus.removeListener(XVM_EVENT.RELOAD_CONFIG, override_values)
     g_eventBus.removeListener(XVM_EVENT.CONFIG_LOADED, o.override_values)
     # g_eventBus.removeListener(XFW_COMMAND.XFW_CMD, on_xfw_command)
 

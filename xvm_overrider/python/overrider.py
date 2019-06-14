@@ -4,7 +4,7 @@ import os.path
 import sys
 from xvm_main.python.config import config_data, get
 
-# Change this to sys.stderr to have messages stand out better in the python.log.s
+# Change this to sys.stderr to have messages stand out better in the python.log.
 log_tgt = sys.stderr
 
 
@@ -12,21 +12,32 @@ class Overrider:
     ov_key = "__xvm_overrider__"
 
     def __init__(self):
+        self.should_dump_config = False
+        pass
+
+    def load_overrides(self):
         overrides_json = os.path.join(os.path.split(__file__)[0], "..", "overrides.json")
         self.overrides = {}
         with open(overrides_json) as overrides:
             self.overrides = json.load(overrides, encoding="utf8")
+        if 'dumpConfig' in self.overrides and self.overrides['dumpConfig']:
+            self.should_dump_config = True
+            print >>log_tgt, "===> Auto dump of config data is active."
 
     def dump_config(self):
+        if not self.should_dump_config:
+            return
         global config_data
         dump_filename = os.path.join(os.getcwd(), "config_data.json")
         with open(dump_filename, "wt") as config_data_file:
             json.dump(config_data, config_data_file, indent=4, ensure_ascii=False)
             print >>log_tgt, "===> Config data dumped to: {}".format(dump_filename)
 
-    def override_values(self):
+    def override_values(self, e=None):
+        self.load_overrides()
         global config_data
         config_data = self.merge_configs(self.overrides, config_data)
+        self.dump_config()
 
     def merge_lists(self, padding, a, b):
         result = []
@@ -43,7 +54,7 @@ class Overrider:
                 if key in a_item and a_item[key] == value:
                     source = b_item.copy()
                     source.pop(Overrider.ov_key, None)
-                    print >>log_tgt, "===> {}'{}:{}' matched, thus overrode with values {}".format(
+                    print >>log_tgt, "{}'{}:{}' matched, thus overrode with values {}".format(
                         padding, key, value, source)
                     a_item.update(source)
             result.append(a_item)

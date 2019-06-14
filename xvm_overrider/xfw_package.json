@@ -1,1 +1,1 @@
-{"wot_version_exactmatch":false,"id":"com.modxvm.xvm.overrider","dependencies":["com.modxvm.xvm"],"version":"1.0","url_update":"https://modxvm.com/","wot_version_min":"1.5.0.4","features":["python"],"description":"XVM Overrider module","url":"https://modxvm.com/","name":"XVM Overrider"}
+﻿{"url":"https://modxvm.com/","id":"com.modxvm.xvm.overrider","version":"1.0","description":"XVM Overrider module","name":"XVM Overrider","wot_version_exactmatch":false,"url_update":"https://modxvm.com/","wot_version_min":"1.5.0.4","dependencies":["com.modxvm.xvm"],"features":["python"]}

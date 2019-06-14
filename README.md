@@ -15,11 +15,14 @@ Then launch the game and wait until you see a line containing the following in `
 
 `2019-06-03 08:51:33.020: INFO: ===> Config Data Dumped to C:\Games\World_of_Tanks\config_data.json`
 
+The dumping of the config data is controlled by `dumpConfig` in `overrides.json`.
+
 # Overriding values
 TBD
 
 ```json
 {
+    "dumpConfig": false,
     "autoReloadConfig": true,
     "minimapAlt": {
         "enabled": false,
