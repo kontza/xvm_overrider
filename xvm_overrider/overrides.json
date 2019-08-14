@@ -1,5 +1,5 @@
 {
-    "dumpConfig": false,
+    "dumpConfig": true,
     "autoReloadConfig": false,
     "minimapAlt": {
         "enabled": false
@@ -148,7 +148,7 @@
         }
     },
     "markers": {
-        "enabled": false
+        "enabled": true
     },
     "hotkeys": {
         "minimapZoom": {
