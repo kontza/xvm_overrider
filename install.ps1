@@ -87,9 +87,10 @@ if ($XVM_VERSION) {
         wot_version_exactmatch = $False;
         features               = @("python");
     } | ConvertTo-Json -Compress | Out-File -FilePath xvm_overrider/xfw_package.json -Encoding UTF8
-    Write-Output "Generated xfw_package.json for the overrider."
-    Copy-Item -Recurse ".\xvm_overrider"  "..\res_mods\mods\xfw_packages\"
-    Write-Output "Copied the XVM Overrider plugin."
+    # Write-Output "Generated xfw_package.json for the overrider."
+    # Copy-Item -Recurse ".\xvm_overrider"  "..\res_mods\mods\xfw_packages\"
+    # Write-Output "Copied the XVM Overrider plugin."
+    Copy-Item "@xvm.xc" ".\..\res_mods\configs\xvm\default\"
 
     # Sixthsense.
     Copy-Item "resources\sixthsense.png" ".\..\res_mods\mods\shared_resources\xvm\res\sixthsense.png"

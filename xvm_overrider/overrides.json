@@ -19,19 +19,16 @@
         },
         "carousel": {
             "small": {
-                "extraFields": [
-                    {
-                        "__xvm_overrider__": {
-                            "key": "format",
-                            "value": "<b><font face='$FieldFont' size='12' color='{{v.c_winrate|#C8C8B5}}'>{{v.winrate%2d~%}}</font></b>"
-                        },
-                        "enabled": false
-                    }
-                ]
+                "extraFields": [{
+                    "__xvm_overrider__": {
+                        "key": "format",
+                        "value": "<b><font face='$FieldFont' size='12' color='{{v.c_winrate|#C8C8B5}}'>{{v.winrate%2d~%}}</font></b>"
+                    },
+                    "enabled": false
+                }]
             },
             "normal": {
-                "extraFields": [
-                    {
+                "extraFields": [{
                         "__xvm_overrider__": {
                             "key": "format",
                             "value": "<b><font face='$FieldFont' size='12' color='{{v.c_winrate|#CFCFCF}}'>{{v.winrate%2d~%}}</font></b>"
@@ -91,8 +88,7 @@
         }
     },
     "battleLabels": {
-        "formats": [
-            {
+        "formats": [{
                 "enabled": false,
                 "__xvm_overrider__": {
                     "key": "updateEvent",
@@ -146,16 +142,5 @@
                 "nick"
             ]
         }
-    },
-    "markers": {
-        "enabled": true
-    },
-    "hotkeys": {
-        "minimapZoom": {
-            "enabled": false
-        }
-    },
-    "damageLog": {
-        "enabled": false
     }
 }
